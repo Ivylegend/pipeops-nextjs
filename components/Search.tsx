@@ -1,19 +1,18 @@
 import React from "react";
 import { Button } from "./ui/button";
+import { Input } from "./ui/input";
 
 const Search = ({ className, params, searchParams }: SearchParamProps) => {
   return (
     <div
-      className={`border-2 border-gray-500 rounded-[2rem] shadow-lg shadow-gray-400 h-14 p-2 flex items-center justify-between ${className}`}
+      className={`border-2 border-gray-200 rounded-[2rem] h-14 p-2 flex items-center justify-between ${className}`}
     >
-      <input
-        className="w-full border-none pl-4"
-        type="text"
+      <Input
+        type="email"
         placeholder="Search Destination..."
+        className="border-none focus:border-none focus-visible:border-none"
       />
-      <div>
-        <Button className="rounded-[2rem]">Search</Button>
-      </div>
+      <Button className="rounded-[2rem]">Search</Button>
     </div>
   );
 };
